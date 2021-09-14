@@ -178,28 +178,55 @@
 
      var id = e.target.dataset.id
      var school_id = this.data.stuinfo[id].school_id
+     var comment = this.data.stuinfo[id].comment
      wx.navigateTo({
-       url: '../userinfo/userinfo?school_id=' + school_id
+       url: '../userinfo/userinfo?school_id=' + school_id+'&comment='+comment
      })
    },
    Agree: function (e) {
      //console.log(e)
-     var id = e.target.dataset.id
-     console.log(id)
-     console.log(this.data.stuinfo[id])
-     let school_id = this.data.stuinfo[id].school_id
-     let result = "通过"
-     this.saveResult(school_id, result, id)
-     this.send_email(school_id,result)
+     var that = this
+     wx.showModal({
+       cancelColor: 'cancelColor',
+       content:"是否确认同意",
+       success (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+          var id = e.target.dataset.id
+          console.log(id)
+          console.log(that.data.stuinfo[id])
+          let school_id = that.data.stuinfo[id].school_id
+          let result = "通过"
+          that.saveResult(school_id, result, id)
+          that.send_email(school_id,result)
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+     })
+     
    },
    disagree: function (e) {
-     var id = e.target.dataset.id
-     console.log(id)
-     console.log(this.data.stuinfo[id])
-     let school_id = this.data.stuinfo[id].school_id
-     let result = "不通过"
-     this.saveResult(school_id, result, id)
-     this.send_email(school_id,result)
+    var that = this
+    wx.showModal({
+      cancelColor: 'cancelColor',
+      content:"是否确认拒绝",
+      success (res) {
+       if (res.confirm) {
+         console.log('用户点击确定')
+         var id = e.target.dataset.id
+          console.log(id)
+          console.log(that.data.stuinfo[id])
+          let school_id = that.data.stuinfo[id].school_id
+          let result = "不通过"
+          that.saveResult(school_id, result, id)
+          that.send_email(school_id,result)
+       } else if (res.cancel) {
+         console.log('用户点击取消')
+       }
+     }
+    })
+     
    },
    send_email:function(school_id,result){
      var email,name,group;
