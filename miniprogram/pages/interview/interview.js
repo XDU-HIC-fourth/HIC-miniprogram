@@ -8,6 +8,11 @@
     * 页面的初始数据
     */
    data: {
+     member:{
+      passed:0,
+      failed:0,
+      pending:0,
+     },
      is_hidden: [],
      //userheadUrl: "/images/tkk.png",
      //nameUrl: "唐可可",
@@ -100,14 +105,21 @@
        for (let i in that.data.stuinfo) {
          if (that.data.stuinfo[i].result == "通过") {
            that.data.is_hidden.push(0)
+           that.data.member.passed++
          }else if (that.data.stuinfo[i].result == "不通过") {
            that.data.is_hidden.push(-1) //已通过为0，未通过为-1，未审批为1
-        } else that.data.is_hidden.push(1) //0不显示，1显示
-         console.log(that.data.is_hidden)
-         that.setData({
-           is_hidden: that.data.is_hidden
-         })
+           that.data.member.failed++
+        } else 
+        {that.data.is_hidden.push(1) //0不显示，1显示
+          that.data.member.pending++
+        }
+         
        }
+       console.log(that.data.is_hidden)
+         that.setData({
+           is_hidden: that.data.is_hidden,
+           member:that.data.member
+         })
        wx.hideLoading({
          success: (res) => {},
        })

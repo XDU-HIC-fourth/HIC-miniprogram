@@ -155,3 +155,12 @@ page {
   justify-content: space-around;
   align-items: center;
 }
+.count{
+  display:flex;
+  justify-content: space-around;
+  font-size: 30rpx;
+}
+.group_name{
+  display: flex;
+  justify-content: center;
+}

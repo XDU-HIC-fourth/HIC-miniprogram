@@ -1,7 +1,14 @@
 <!--pages/interview/interview.wxml-->
+<!--text class="group_name">{{group}}</text-->
 <view class="search">
   <input type="text" class="search-input" bindinput="bindKeyInput"></input>
   <image class="search-img" src="/images/search2.png" bindtap="search"></image>
+</view>
+
+<view class="count">
+  <text>待处理{{member.pending}}</text>
+  <text>已通过{{member.passed}}</text>
+  <text>已拒绝{{member.failed}}</text>
 </view>
 
 <view class="user" wx:for="{{stuinfo}}" hidden="{{is_hidden[index]!=1}}">
@@ -11,7 +18,7 @@
     <view class="userinfo-name" data-id="{{index}}">{{item.Name}}</view>
     <!-- <view class="userinfo-number">{{numberUrl}}</view> -->
   </view>
-
+  
   <view class="button">
     <button class="agree"
       style="width: 110rpx; height: 50rpx; margin-right: 20rpx; padding: 0rpx;font-size: 25rpx; border-radius: 60rpx;"

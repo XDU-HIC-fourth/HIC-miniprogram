@@ -7,6 +7,6 @@ cloud.init()
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   var title = "面试通知"
-  var content = "报名时间为13号~16号。面试时间初步定在17号下午、晚上，18号和19号，面试地点在竹园一号楼活动室,具体时间段以及更多最新消息请关注招新QQ群：776998675"
+  var content = "报名时间为13号~17号。面试时间初步定在17号下午、晚上，18号晚上，面试地点在竹园一号楼1区121活动室,具体时间段以及更多最新消息请关注招新QQ群：776998675"
   return {title,content}
 }

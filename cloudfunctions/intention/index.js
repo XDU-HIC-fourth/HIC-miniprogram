@@ -28,7 +28,7 @@ exports.main = async (event, context) => {
     openid: wxContext.OPENID,
     is_passed: 0, //is_pass==0为未审核，1为通过，2为不通过
   }
-  
+  let create_application = false
   for (let i = 0; i < event.yiyuan.length; i++) {
     var f = 0 // f==0代表改用户在该分表中未创建信息，f==1则代表已创建。若未创建则创建信息，否则不作处理。
     await db.collection(event.yiyuan[i])
@@ -53,7 +53,7 @@ exports.main = async (event, context) => {
       /**member分表新增用户end*/
       /**user表application中加入该组 start */
       var application = event.yiyuan[i]
-      if (member.application == undefined) {
+      if (member.application == undefined && create_application==false) {
         await db.collection("user")
           .where({
             openid: wxContext.OPENID
@@ -63,6 +63,7 @@ exports.main = async (event, context) => {
               application: new Array(application)
             }
           })
+          create_application = true
       } else {
         await db.collection("user")
           .where({

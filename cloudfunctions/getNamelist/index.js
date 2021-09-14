@@ -45,6 +45,7 @@ exports.main = async (event, context) => {
     //返回相应组的人员名单
     var data = {}
     await db.collection(groupName)
+    .orderBy('Name','desc')
     .get()
     .then(res =>{
       console.log(res)
