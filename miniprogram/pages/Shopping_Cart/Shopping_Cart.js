@@ -11,7 +11,8 @@ Page({
     selected_g_p:[],
     final_selected:[],
     select_all_color:"gray",
-    final_selected_group_name:[]
+    final_selected_group_name:[],
+    back:0  //back为2时返回到我们界面
   
   },
   deal_data:function(){
@@ -82,6 +83,7 @@ Page({
         message_title:res.result.title,
         message_content:res.result.content
       })
+      
     })
   },
 
@@ -168,7 +170,13 @@ Page({
           }
             wx.showModal({
               title:that.data.message_title,
-              content:that.data.message_content
+              content:that.data.message_content,
+              success(res){
+                that.data.back++;
+                if (that.data.back>=2) wx.navigateBack({
+                  delta: 1,
+                })  
+              }
             })
           
           
@@ -182,9 +190,10 @@ Page({
                 success: (res) => {},
               })
               wx.showToast({
-                title: '已发送',
+                title: '报名成功',
                 icon:'success'
               })
+             
             },
             fail:res =>{
               wx.showToast({
@@ -192,13 +201,18 @@ Page({
                 icon:'error'
               })
             }
-          }) //提交意愿函数待上线，目前缺少前方页面传来的数据
+          }) //提交意愿
           var templateID = that.data.templateID
           wx.requestSubscribeMessage({
             tmplIds: [templateID],
             success: (result) => {console.log("获取订阅消息的用户权限")},
             fail: (result) => {console.log(result)},
-            complete: (res) => {},
+            complete: (res) => {
+              that.data.back++;
+              if (that.data.back>=2) wx.navigateBack({
+                delta: 1,
+              })  
+            },
           })
         }
       }
