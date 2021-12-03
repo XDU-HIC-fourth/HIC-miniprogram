@@ -43,14 +43,33 @@ exports.main = async (event, context) => {
       groupName = res.data[0].name
     })
     //返回相应组的人员名单
+    /** 获取集合记录总数 start */
+    const countResult = await db.collection(groupName).count()
+    const total = countResult.total
+    console.log('总共有'+total+'条记录')
+    /** 获取集合记录总数 end */
+    // 每次最多获取25条记录
+    const MAX_LIMIT = 25
+    /** 计算总共可以分多少页 start*/
+    const total_times = Math.ceil(total / MAX_LIMIT)
+    console.log('总共可以分'+total_times+'页')
+    /** 计算总共可以分多少页 end*/
+
+    // 获取名单
     var data = {}
-    await db.collection(groupName)
-    .orderBy('Name','desc')
-    .get()
-    .then(res =>{
-      console.log(res)
-      data = res.data
-    })
+    var namelists = []
+    for(let i = 1; i <= total_times; i++ ){
+      await db.collection(groupName)
+      .orderBy('Name','desc')
+      .skip((i-1) * MAX_LIMIT)
+      .limit(MAX_LIMIT)
+      .get()
+      .then(res =>{
+        console.log('第' + i + '页',res)
+        namelists = namelists.concat(res.data)
+      })
+    }
+    console.log(namelists)
     var result = {}
     result.errCode = 0
     result.errMsg = '获取成功'
