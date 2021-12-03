@@ -207,8 +207,8 @@ async function sendResultMessage(openid,userName,group,interviewResult){
   const sendResult = await cloud.openapi.subscribeMessage.send({
     touser: OPENID,
     templateId: templateID,
-    miniprogram_state: 'developer', //跳转小程序类型：developer为开发版；trial为体验版;formal为正式版；默认为正式版
-    page: 'pages/login/index',
+    miniprogram_state: 'formal', //跳转小程序类型：developer为开发版；trial为体验版;formal为正式版；默认为正式版
+    page: 'pages/welcome/index',
     data:{
       thing1:{
         value:userName

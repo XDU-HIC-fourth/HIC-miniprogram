@@ -1,4 +1,5 @@
 // miniprogram/pages/introduce_index/introduce_index.js
+const app = getApp()
 Page({
 
   /**
@@ -158,21 +159,17 @@ Page({
   onLoad: function (options) {
     getApp().globalData.group = this.data.group;
     getApp().globalData.department = this.data.department;
+    let src="department[0].d_src"
+    this.setData({
+      [src]:app.globalData.d_image_path
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    wx.cloud.callFunction({
-      name:"searchresult"
-    }).then(res=>{
-      console.log(res)
-      this.setData({
-        application_result:res.result.data
-      })
-      console.log(this.data.application_result)
-    })
+   
   },
 
   /**
@@ -190,6 +187,15 @@ Page({
       })
       this.red_point()
     }
+    wx.cloud.callFunction({
+      name:"searchresult"
+    }).then(res=>{
+      console.log(res)
+      this.setData({
+        application_result:res.result.data
+      })
+      console.log(this.data.application_result)
+    })
   },
 
   /**

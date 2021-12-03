@@ -14,7 +14,19 @@ App({
     userinfo:{
       avatarUrl:"../../images/hic-head.jpg" ,  //头像
       Name:"HIC"
-    }
+    },
+    d_image_path:[]
+  },
+  imageloader:function (img_src) {
+    let that = this
+    wx.getImageInfo({
+      src: img_src,
+      success (res) {  
+        console.log(res)
+        that.globalData.d_image_path=res.path
+        console.log(that.globalData.d_image_path)
+      }
+    })
   },
   onLaunch: function () {
     if (!wx.cloud) {
@@ -29,5 +41,8 @@ App({
         traceUser: true,
       })
     }
+    this.imageloader("cloud://cloud1-6grlmnp6a2096931.636c-cloud1-6grlmnp6a2096931-1305879893/images/宣传组@3x.png")
+   
   }
+  
 })

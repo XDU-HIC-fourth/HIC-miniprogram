@@ -46,6 +46,7 @@ Page({
       getApp().globalData.userinfo.title = "华为创新俱乐部"
      }
      //可能会有异步bug
+    
   },
 
   /**
