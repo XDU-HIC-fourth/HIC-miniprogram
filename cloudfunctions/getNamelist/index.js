@@ -73,7 +73,7 @@ exports.main = async (event, context) => {
     var result = {}
     result.errCode = 0
     result.errMsg = '获取成功'
-    result.data = data
+    result.data = namelists
     result.group = groupName
     return {result}
 }
