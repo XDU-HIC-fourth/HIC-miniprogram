@@ -49,7 +49,7 @@
 
   <view class="input_line">
     <text class="term">邮箱:</text>
-    <input class="input" type="text" name="email" confirm-type="next" placeholder="用来接收面试结果哦~"></input>
+    <input class="input" type="text" name="email" confirm-type="next" placeholder="一定要填对哦！"></input>
   </view>
 
   <view class="input_line">
