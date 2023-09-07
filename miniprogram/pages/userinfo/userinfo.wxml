@@ -14,6 +14,7 @@
     <text class="name">年级：{{info.grade}}</text>
     <text class="major">专业/大类：{{info.professional}}</text>
     <text class="phone_number">手机号：{{info.phone}}</text>
+    <text class="email">邮箱：{{info.email}}</text>
     <text class="hobby">个人介绍：{{info.introduction}}</text>
   </view>
 </view>

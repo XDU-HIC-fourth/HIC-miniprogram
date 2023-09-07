@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="57438c79-4c67-47f4-8675-7e3af8134df4" name="变更" comment="优化">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudfunctions/saveResult/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cloudfunctions/saveResult/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/interview/interview.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram/pages/interview/interview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/new_user/new_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram/pages/new_user/new_user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniprogram/pages/Shopping_Cart/Shopping_Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram/pages/Shopping_Cart/Shopping_Cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniprogram/pages/edit_userinfo/edit_userinfo.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram/pages/edit_userinfo/edit_userinfo.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miniprogram/pages/new_user/new_user.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram/pages/new_user/new_user.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miniprogram/pages/userinfo/userinfo.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram/pages/userinfo/userinfo.wxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,24 +35,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;demo&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/微信开发者工具/HIC-miniprogram&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/微信开发者工具/HIC-miniprogram",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -85,6 +85,7 @@
       <workItem from="1693988552516" duration="1296000" />
       <workItem from="1693999600529" duration="8969000" />
       <workItem from="1694013813022" duration="21421000" />
+      <workItem from="1694098738031" duration="1853000" />
     </task>
     <task id="LOCAL-00001" summary="增加录取结果通知页面，对其他页面进行了一些优化。">
       <created>1661134779339</created>

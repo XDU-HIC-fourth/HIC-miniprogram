@@ -43,6 +43,11 @@
   </view>
 
   <view class="input_line">
+    <text class="term">邮箱:</text>
+    <input class="input" type="text" name="phone" value="{{userInfo.email}}"></input>
+  </view>
+
+  <view class="input_line">
     <text class="term">自我介绍:</text>
     <textarea class="input" type="text" name="introduction" cols="30" rows="10" maxlength="-1"
               value="{{userInfo.introduction}}"></textarea>

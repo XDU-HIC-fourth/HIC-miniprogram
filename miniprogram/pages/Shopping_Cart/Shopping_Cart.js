@@ -175,22 +175,24 @@ Page({
               success: res => {
                 //提交意愿
                 wx.cloud.callFunction({
-                  name: 'createApplicants',
                   data: {
                     groups: that.data.final_selected_group_id
                   },
+                  name: 'createApplicants',
                   success: res => {
-                    wx.hideLoading()
-                    wx.showToast({
-                      title: '报名成功',
-                      icon: 'success'
-                    })
-                    wx.cloud.callFunction({
-                      name: 'createApplicants',
-                      data: {
-                        groups: that.data.final_selected_group_id
-                      }
-                    })
+                    console.log('res', res)
+                    if (res.result.code === 1000 ) {
+                      wx.hideLoading()
+                      wx.showToast({
+                        title: '报名成功',
+                        icon: 'success'
+                      })
+                    } else {
+                      wx.showToast({
+                        title: '已经提交了两个了，不能再交啦！',
+                        icon: 'error'
+                      })
+                    }
                   },
                   fail: res => {
                     wx.hideLoading()
