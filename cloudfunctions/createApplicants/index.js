@@ -19,9 +19,9 @@ exports.main = async (event, _) => {
   }
 
   const info = await getUserRequiredInfo(db, openId)
-  const existData=await getExistData(db,openId)
+  const existData = await getExistData(db, openId)
   // 过滤出没有报的
-  const groups = event.groups.filter(e=>!existData.has(e))
+  const groups = event.groups.filter(e => !existData.has(e))
 
   if (info == null) {
     return {
@@ -36,11 +36,18 @@ exports.main = async (event, _) => {
     }
   }
 
+  if (existData.size + groups.length > 2) {
+    return {
+      code: 1001,
+      msg: "request to create too much"
+    }
+  }
+
   // fast path
   if (groups.length === 0) {
     return {
-      code:1000,
-      msg:"created"
+      code: 1000,
+      msg: "created"
     }
   }
 
