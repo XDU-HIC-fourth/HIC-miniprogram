@@ -64,7 +64,7 @@ exports.main = async (event, _) => {
     applicants.push(applicant)
   }
 
-  db.collection("applicant").add({
+  return await db.collection("applicant").add({
     data: applicants
   }).then(_ => {
     return {
