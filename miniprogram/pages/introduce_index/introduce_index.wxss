@@ -71,6 +71,7 @@ page{
   align-items: center;
   overflow-y: scroll;
   white-space: nowrap; 
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
 }
 .Recommendation{
   height: 90%;

@@ -305,7 +305,6 @@ Page({
         }
       }
     })
-
   },
   saveResult: function (openId, result, id) {
     const that = this
