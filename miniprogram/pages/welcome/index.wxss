@@ -1,17 +1,18 @@
 /* pages/welcome/index.wxss */
-.logoContainer {
-  /* width: 100%;
-  height: 100%; */
-  position: absolute;
+.container {
   z-index: 4;
-  /* height: 0vw; */
-  right: 18%;
-  top: 30%;
+  height: 100%;
+  width: 100%;
+  margin-top: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  margin: auto;
-  /* margin-top: 500rpx; */
+.logoContainer {
+  margin: 0 auto;
   animation-name: scale;  
-  animation-duration: 1.6s;  
+  animation-duration: 1.5s;  
   animation-timing-function: ease-in-out;  
   animation-fill-mode: forwards;  
 }

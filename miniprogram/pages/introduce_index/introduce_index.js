@@ -59,7 +59,7 @@ Page({
       that.setData({
         groups: res.result.data
       })
-      wx.hideLoading()
+      
     })
     // 获取小组分类
     wx.cloud.callFunction({
@@ -68,9 +68,10 @@ Page({
       console.log('getGroupTypes的调用结果', res)
       getApp().globalData.groupTypes = res.result.data
       that.setData({
-        groupTypes: res.result.data
+        groupTypes: res.result.data, 
+      }, function() {
+        wx.hideLoading()
       })
-      wx.hideLoading();
     })
 
     // getApp().globalData.group = this.data.group
@@ -79,13 +80,14 @@ Page({
     this.setData({
       [src]: app.globalData.d_image_path
     })
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**

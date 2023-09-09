@@ -11,12 +11,15 @@
 <!-- <text class="w_t1">华创</text>
 <text class="w_t2" decode="{{true}}">HUAWEI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INNOVATION&nbsp;&nbsp;&nbsp;&nbsp;CLUB</text>
 <text class="w_t3">西电华为创新俱乐部</text> -->
-<view class="logoContainer">
+<view class="container">
+  <view class="logoContainer">
   <image class="logo" mode="heightFix" src="../../images/HIC.png"></image>
   <view class="textEnterContainer">
     <text class="textEnter">上滑以进入</text>
   </view>
 </view>
+</view>
+
 
 <cover-image class="up-img" bindtap="login" src="../../images/up.png" animation="{{animation}}"/>
 
