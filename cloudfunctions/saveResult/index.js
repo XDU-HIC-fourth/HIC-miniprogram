@@ -4,18 +4,18 @@ const cloud = require('wx-server-sdk')
 cloud.init()
 
 const templateId = "7nG6mOLUBgkfmLbCP1GZaXXmcKqAcCvO-JJUCWDoeEw"
-const qq = "670560395"
-const time = "9月22日22:00"
-const clubQQ = "378286068"
+const qq = "892836079"
+const time = "9月21日22:00"
+const clubQQ = "316288297"
 
 const groupQQMap = new Map()
 {
   groupQQMap.set("0", "634472513")
   groupQQMap.set("1", "937822336")
-  groupQQMap.set("2", "937715649")
+  groupQQMap.set("2", "751699443")
   groupQQMap.set("3", "876461576")
   groupQQMap.set("4", "937235665")
-  groupQQMap.set("5", "604271303")
+  groupQQMap.set("5", "553718677")
   groupQQMap.set("6", "664670158")
   groupQQMap.set("7", "955061487")
   groupQQMap.set("8", "937807633")

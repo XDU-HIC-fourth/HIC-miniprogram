@@ -72,6 +72,7 @@ function checkFormData(formUser) {
   if (formUser.grade === "") return false
   if (formUser.professional === "") return false
   if (formUser.phone === "") return false
+  if (formUser.email === "") return false
   if (formUser.introduction === "") return false
   return true
 }

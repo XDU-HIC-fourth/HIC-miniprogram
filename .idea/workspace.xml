@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57438c79-4c67-47f4-8675-7e3af8134df4" name="变更" comment="优化">
+    <list default="true" id="57438c79-4c67-47f4-8675-7e3af8134df4" name="变更" comment="优化部分页面布局">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/interview/interview.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram/pages/interview/interview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/introduce_index/introduce_index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram/pages/introduce_index/introduce_index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram/pages/result/result.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram/pages/result/result.wxss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +83,7 @@
       <workItem from="1694013813022" duration="21421000" />
       <workItem from="1694098738031" duration="2160000" />
       <workItem from="1694157491929" duration="1189000" />
-      <workItem from="1694247133552" duration="1254000" />
+      <workItem from="1694247133552" duration="1902000" />
     </task>
     <task id="LOCAL-00001" summary="增加录取结果通知页面，对其他页面进行了一些优化。">
       <created>1661134779339</created>
@@ -347,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694247156827</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="优化部分页面布局">
+      <option name="closed" value="true" />
+      <created>1694248699534</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1694248699534</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +372,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="修改了一些icon以及做了一些优化。" />
     <MESSAGE value="对创建用户的页面进行了一些优化和调整。" />
     <MESSAGE value="修复了一些bug，调整了部分页面布局，优化体验。" />
     <MESSAGE value="修复若干bug，优化体验。" />
@@ -392,6 +396,7 @@
     <MESSAGE value="优化模糊搜索提示等" />
     <MESSAGE value="优化逆天bug" />
     <MESSAGE value="优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化" />
+    <MESSAGE value="优化部分页面布局" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化部分页面布局" />
   </component>
 </project>
